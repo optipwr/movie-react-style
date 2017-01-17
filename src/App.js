@@ -12,16 +12,10 @@ class App extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {
-            searchText: ''
-        }
         this.handleSearch = this.handleSearch.bind(this)
     }
 
     handleSearch(searchTextFromChild){
-        this.setState({
-            searchText: searchTextFromChild
-        });
         this.props.router.push(encodeURI('/search/' + searchTextFromChild));
     }
 
